@@ -26,7 +26,7 @@ if st.sidebar.button('Predict'):
     st.write(iris_df)
 
     # 予測の実行
-    response = requests.post("http://localhost:8501/predict", json=iris)
+    response = requests.post("https://iris-classifier-n5e5.onrender.com/predict", json=iris)
     prediction = response.json()["prediction"]
   
 
