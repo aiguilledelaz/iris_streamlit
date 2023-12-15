@@ -34,6 +34,7 @@ petalValue = st.sidebar.slider('petal length (cm)', min_value=0.0, max_value=10.
 st.title('Iris Clasifier')
 st.write('## Input Value')
 
+#一列のデータフレーム
 value_df = pd.DataFrame([],columns=['data','sepal length (cm)','petal length (cm)'])
 record = pd.Series(['data',sepalValue, petalValue], index=value_df.columns)
 value_df = value_df.append(record, ignore_index=True)
@@ -54,4 +55,4 @@ st.write(pred_df)
 # 予測結果の出力
 name = pred_df.idxmax(axis=1).tolist()
 st.write('## Result')
-st.write('このアイリスはきっと',str(name[0]),'です!')
+st.write('このアイリスはきっと',str(name[0]),'です!')pip
