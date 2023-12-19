@@ -27,6 +27,7 @@ if st.sidebar.button('Predict'):
 
     # 予測の実行
     response = requests.post("https://test-iris-1z1u.onrender.com//predict", json=iris)
+    time.sleep(10)
     prediction = response.json()["prediction"]
   
 
